@@ -12,10 +12,11 @@ Built using **Streamlit**, **LangChain**, **Google Gemini AI**, and **HuggingFac
 - **Text-to-Speech (TTS):** Speaks answers aloud in the user’s language.  
 - **Financial Guidance:** Beginner-friendly explanations on savings, investments, loans, insurance, and money management.  
 - **Conversational Flow:** Can ask clarifying questions when queries are vague.  
-- **Context-Aware Responses:** Uses **Chroma** database for secure document retrieval.  
+- **Context-Aware Responses:** Uses **RAG** (Retrieval-Augmented Generation) with **Chroma database** to fetch relevant documents and provide accurate, up-to-date answers.  
 
 ### 🔹 2. Interactive Quiz Module 📊  
-- **Custom Quizzes:** Enter any finance-related topic to generate **10 multiple-choice questions**.  
+- **Custom Quizzes:** Enter any finance-related topic to generate **10 multiple-choice questions**.
+- **RAG-Powered Retrieval:** Uses **RAG** (Retrieval-Augmented Generation) with the **Chroma database** to fetch relevant financial information and generate context-aware quiz questions.
 - **Multilingual Support:** Quizzes available in all 29+ supported languages.  
 - **Randomized Options:** Shuffles answer options while keeping correctness intact.  
 - **Explanations Included:** Each question has a beginner-friendly explanation.  
@@ -29,7 +30,7 @@ Built using **Streamlit**, **LangChain**, **Google Gemini AI**, and **HuggingFac
 - **Frontend & Framework:** [Streamlit](https://streamlit.io/)  
 - **Language Model API:** Google Gemini AI (`gemini-2.0-flash-001`)  
 - **Embeddings:** HuggingFace `sentence-transformers/all-MiniLM-L6-v2`  
-- **Vector Database:** [Chroma](https://www.trychroma.com/) for retrieval  
+- **Vector Database and RAG:** [Chroma](https://www.trychroma.com/) used for **RAG** (Retrieval-Augmented Generation) to provide context-aware answers and quiz questions 
 - **Text-to-Speech (TTS):** [gTTS](https://pypi.org/project/gTTS/)  
 - **Audio Playback:** `sounddevice`, `soundfile`  
 - **Language Detection:** [langid](https://pypi.org/project/langid/)  
@@ -82,9 +83,9 @@ streamlit run app.py
 ```
 FinArivu/
 │── main.py             # Main Streamlit app entry point
-│── chatbot.py          # Handles chatbot logic, Gemini integration & Chroma retrieval
-│── quiz.py             # Quiz generation, scoring, and explanations
-│── app.py              # Helper functions (language detection, formatting, etc.)
+│── chatbot.ipynb       # Handles chatbot logic, Gemini integration, Chroma storage, and RAG retrieval
+│── quiz_st.py          # Quiz generation, scoring, and explanations logic using streamlit
+│── app.py              # Chatbot logic with TTS functionality and Helper functions (language detection, formatting, etc.)
 │── requirements.txt    # List of dependencies
 │── .env                # API key configuration (not to be committed)
 │── README.md           # Project documentation
@@ -135,6 +136,7 @@ FinArivu/
 * 📈 Personalized financial goal tracking.
 * 🎯 Quiz difficulty levels & progress analytics.
 * 📰 Real-time financial news integration.
+* 💹 Virtual trading simulation with delayed market data to practice portfolio management and investment strategies.
 
 ---
 
