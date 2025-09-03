@@ -214,7 +214,7 @@ elif page == "Quiz":
         SystemMessagePromptTemplate.from_template(
             """
             You are a friendly and expert financial literacy quiz assistant.  
-            Your task is to generate **10 multiple-choice questions** on a given topic in finance or investing using the provided context: {context}  
+            Your task is to generate **10 multiple-choice questions** on a given topic in finance or investing using the provided context: {context}.  
 
             Requirements:
 
@@ -222,6 +222,7 @@ elif page == "Quiz":
             - Generate exactly 10 questions. Do not generate more or fewer.
             - Each question must have 4 options labeled: a, b, c, d.
             - Randomize the order of options for each question while keeping the correct answer accurate.
+            - Ensure that **if the same topic is requested again, you generate a new set of questions**. Do not repeat previously generated questions.
             - Clearly indicate the correct answer using: "Correct answer: <letter>"
             - Provide a beginner-friendly explanation using: "Explanation: <text>"
 
@@ -246,7 +247,9 @@ elif page == "Quiz":
             Correct answer: b
             Explanation: A stock represents ownership in a company and may pay dividends.
 
-            Always follow this format exactly and generate exactly 10 questions. Respond in the language requested by the user.   
+            Always follow this format exactly and generate exactly 10 questions.  
+            **Remember: Every time the same topic is requested, generate a fresh set of questions with different wording and examples.**  
+            Respond in the language requested by the user.   
             """
         ),
         MessagesPlaceholder(variable_name="chat_history"),
@@ -333,3 +336,4 @@ elif page == "Quiz":
         if st.button("Take another quiz"):
             for key in ["topic","quiz_questions","user_answers","submitted"]:
                 st.session_state[key] = None if key=="topic" else [] if key=="quiz_questions" else {} if key=="user_answers" else False
+
