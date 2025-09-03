@@ -50,7 +50,7 @@ cd FinArivu
 
 ```bash
 python -m venv venv
-venv\Scripts\activate   # On Windows
+venv\Scripts\activate 
 ```
 
 ### 3. Install Dependencies
