@@ -50,7 +50,6 @@ cd FinArivu
 ```bash
 python -m venv venv
 venv\Scripts\activate   # On Windows
-source venv/bin/activate # On Mac/Linux
 ```
 
 ### 3. Install Dependencies
@@ -82,14 +81,14 @@ streamlit run app.py
 
 ```
 FinArivu/
-│── app.py              # Main Streamlit app entry point
+│── main.py             # Main Streamlit app entry point
 │── chatbot.py          # Handles chatbot logic, Gemini integration & Chroma retrieval
 │── quiz.py             # Quiz generation, scoring, and explanations
-│── utils.py            # Helper functions (language detection, formatting, etc.)
+│── app.py              # Helper functions (language detection, formatting, etc.)
 │── requirements.txt    # List of dependencies
 │── .env                # API key configuration (not to be committed)
 │── README.md           # Project documentation
-│── /data               # Financial documents & resources for Chroma DB
+│── /PDF data           # Financial documents & resources for Chroma DB
 │── /screenshots        # App screenshots (Chatbot, Quiz pages)
 ```
 
@@ -109,7 +108,7 @@ FinArivu/
 
 ## 🎥 Demo Video
 
-👉 [Watch the demo here](https://your-demo-video-link.com)
+👉 [Watch the demo here](https://drive.google.com/file/d/1wHGDbov_vCQGexn6VPprrPNoE6-MW4_b/view?usp=sharing)
 
 ---
 
@@ -141,11 +140,8 @@ FinArivu/
 
 ## 📜 License
 
-This project is licensed under the **Apache License 2.0**.
-You may not use this project except in compliance with the License.
-A copy of the License is available at:
-
-[http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+This project is licensed under the MIT License.
+Use, modify, and share freely with proper attribution.
 
 ---
 
