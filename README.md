@@ -99,11 +99,14 @@ FinArivu/
 
 ### 💬 Chatbot Page
 
-*(screenshot placeholder)*
+![](./screenshots/FA1.PNG)
+![](./screenshots/FA2.PNG)
+![](./screenshots/FA3.PNG)
 
 ### 📊 Quiz Page
 
-*(screenshot placeholder)*
+![](./screenshots/FB1.PNG)
+![](./screenshots/FB2.PNG)
 
 ---
 
