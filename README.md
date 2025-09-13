@@ -116,7 +116,7 @@ FinArivu/
 
 ---
 
-## 📂 Presntation
+## 📂 Presentation
 👉 [View the presentation here](https://github.com/Paul-Andrew-15/FinArivu/blob/main/FinArivu%20presentation.pptx)
 
 ---
