@@ -42,7 +42,7 @@ Built using **Streamlit**, **LangChain**, **Google Gemini AI**, and **HuggingFac
 
 ### 1. Clone the Repository  
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Paul-Andrew-15/FinArivu.git
 cd FinArivu
 ````
 
